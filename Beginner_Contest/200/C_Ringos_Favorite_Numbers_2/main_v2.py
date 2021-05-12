@@ -7,7 +7,7 @@ def readstd():
 
 def readarray(typ):
     inpt_list = readstd().split()
-    return list(map(typ, inpt_list))
+    return [int(x) if x.isdigit() else x for x in inpt_list]
 
 
 if __name__ == "__main__":
@@ -26,33 +26,3 @@ if __name__ == "__main__":
             cur += 1
             nxt = cur
     stdout.write(str(count))
-
-
-#include <bits/stdc++.h>
-#define rep(i, n) for (int i = 0; i < n; ++i)
-using namespace std;
-
-
-
-int main()
-{
-	int n;
-    cin >> n;
-    vector<int> arr(n);
-    rep(i, n) cin >> arr[i];
-
-
-	int cur = 0;
-    int nxt = 0;
-    int cnt = 0;
-    while (cur < sizeof(arr)) {
-        nxt += 1;
-        if ((arr[cur] - arr[nxt]) % 200 == 0) {
-            cnt++;
-        if (nxt = sizeof(arr) - 1) {
-            cur++;
-            nxt = cur;
-      cout << cnt << "\n";
-    }
-	return 0;
-}
