@@ -8,14 +8,18 @@ def readraw(typ=None):
 def readarray(typ=None):
     inpt_list = input().split()
     if typ is None:
-        return [int(x) if x.lstrip("-").isdigit() else x for x in inpt_list]
+        return [int(x) if x.isdigit() else x for x in inpt_list]
     else:
         return list(map(typ, inpt_list))
 
 
 if __name__ == "__main__":
-    num = readraw(int)
-    # arr = readarray()
-    # TODO
-    ans = "This is a template."
+    d = readraw(int)
+    dic = {
+        25: 'Christmas',
+        24: 'Christmas Eve',
+        23: 'Christmas Eve Eve',
+        22: 'Christmas Eve Eve Eve'
+        }
+    ans = dic[d]
     print(ans)

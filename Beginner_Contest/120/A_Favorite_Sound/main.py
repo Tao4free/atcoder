@@ -14,8 +14,6 @@ def readarray(typ=None):
 
 
 if __name__ == "__main__":
-    num = readraw(int)
-    # arr = readarray()
-    # TODO
-    ans = "This is a template."
+    a, b, c = readarray()
+    ans = min(b // a, c)
     print(ans)

@@ -14,8 +14,14 @@ def readarray(typ=None):
 
 
 if __name__ == "__main__":
-    num = readraw(int)
-    # arr = readarray()
-    # TODO
-    ans = "This is a template."
+    a, b, k = readarray()
+    test = max(a, b) + 1
+    cnt = 0
+    while True:
+        test -= 1
+        if (a % test == 0) and (b % test == 0):
+            cnt += 1
+            if cnt == k:
+                ans = test
+                break
     print(ans)

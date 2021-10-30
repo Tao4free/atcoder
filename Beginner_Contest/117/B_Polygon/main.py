@@ -8,14 +8,14 @@ def readraw(typ=None):
 def readarray(typ=None):
     inpt_list = input().split()
     if typ is None:
-        return [int(x) if x.lstrip("-").isdigit() else x for x in inpt_list]
+        return [int(x) if x.isdigit() else x for x in inpt_list]
     else:
         return list(map(typ, inpt_list))
 
 
 if __name__ == "__main__":
     num = readraw(int)
-    # arr = readarray()
-    # TODO
-    ans = "This is a template."
+    arr = readarray()
+    arr_max = max(arr)
+    ans = ['No', 'Yes'][arr_max < (sum(arr) - arr_max)]
     print(ans)
