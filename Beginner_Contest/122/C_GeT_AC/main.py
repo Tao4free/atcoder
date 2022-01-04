@@ -24,6 +24,7 @@ if __name__ == "__main__":
         cur = string[idx]
         pre = string[idx-1]
         cnt[idx] = cnt[idx-1] + (1 if pre+cur == 'AC' else 0)
+        # print(cnt)
 
     for q in query:
         ans = cnt[q[1]-1] - cnt[q[0]-1]
